@@ -1,6 +1,8 @@
 --- 
   - hosts: apache
-    sudo: yes
+    become: yes
     tasks:
-      - name: install apache2
-        apt: name=apache2 update_cache=yes state=latest
+    - name: i want to install web server on ansible node server
+      apt:
+        name: apache2
+        state: present 
