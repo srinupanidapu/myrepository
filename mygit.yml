@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: yes
+  tasks:
+  - name: i want to intall git on ansible ubuntu nodes
+    apt:
+       name: git
+       state: present
+
+  - name: i want to install tree on ansbile ubuntu  nodes
+    apt:
+      name: tree
+      state: present
+
+
+  
